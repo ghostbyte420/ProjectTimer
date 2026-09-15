@@ -8,4 +8,4 @@ a tool you can hone your time management skills on.
 
 ---
 
-![Alt Text](https://uoavox.studio/site_image/softwaredl/ProjectTimer.png?version=2)
+![Alt Text](https://github.com/user-attachments/assets/f6c356c6-eb1b-442f-a159-062cbfba1198)
