@@ -8,6 +8,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,16">
@@ -40,5 +41,14 @@
                 <DataGridCheckBoxColumn Header="Incomplete" Binding="{Binding IsIncomplete}" Width="80"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <StatusBar Grid.Row="3" Margin="-16,16,0,-16" Padding="0">
+            <StatusBarItem HorizontalAlignment="Right" HorizontalContentAlignment="Right" Margin="0" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total Time:" FontWeight="Bold" Margin="0,0,6,0"/>
+                    <TextBlock x:Name="TotalTimeTextBlock" Text="000000:00:00" FontFamily="Consolas" Foreground="Green" FontWeight="Bold"/>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

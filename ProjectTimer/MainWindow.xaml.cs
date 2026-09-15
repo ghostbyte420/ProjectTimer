@@ -27,6 +27,21 @@ namespace ProjectTimer
                 Interval = TimeSpan.FromMilliseconds(200)
             };
             _timer.Tick += Timer_Tick;
+
+            Entries.CollectionChanged += (_, _) => UpdateTotalTime();
+            UpdateTotalTime();
+        }
+
+        private void UpdateTotalTime()
+        {
+            var total = TimeSpan.Zero;
+            foreach (var entry in Entries)
+            {
+                total += entry.Duration;
+            }
+
+            var totalHours = (long)total.TotalHours;
+            TotalTimeTextBlock.Text = $"{totalHours:D6}:{total.Minutes:D2}:{total.Seconds:D2}";
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
